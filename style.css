@@ -13,6 +13,7 @@ body {
   background: #070707;
   color: white;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* HEADER */
@@ -145,14 +146,21 @@ body {
 /* GRID */
 .grid {
 
+  width: 100%;
+  max-width: 1300px;
+
+  margin: auto;
+
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr));
+    repeat(auto-fit, minmax(280px, 1fr));
 
   gap: 30px;
 
-  padding: 20px 50px 80px;
+  padding: 40px 30px 80px;
+
+  align-items: stretch;
 
 }
 
@@ -169,6 +177,12 @@ body {
 
   border: 1px solid rgba(255,255,255,0.08);
 
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
 }
 
 .card:hover {
@@ -183,15 +197,19 @@ body {
 
   width: 100%;
 
-  height: 250px;
+  height: 320px;
 
   object-fit: cover;
+
+  object-position: center;
+
+  display: block;
 
 }
 
 .card h3 {
 
-  padding-top: 20px;
+  padding: 20px 20px 10px;
 
   text-align: center;
 
@@ -203,9 +221,13 @@ body {
 
   text-align: center;
 
-  padding: 15px 20px 25px;
+  padding: 0 20px 25px;
 
   color: #bbbbbb;
+
+  line-height: 1.6;
+
+  flex-grow: 1;
 
 }
 
@@ -326,6 +348,11 @@ button:hover {
 
   .main-title{
     font-size:4rem;
+    letter-spacing:4px;
+  }
+
+  .hero{
+    padding:70px 20px;
   }
 
   .hero h2{
@@ -334,6 +361,10 @@ button:hover {
 
   .grid{
     padding:20px;
+  }
+
+  .card img{
+    height:260px;
   }
 
 }
